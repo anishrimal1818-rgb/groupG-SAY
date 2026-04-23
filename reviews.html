@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - MindfulPath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+    <div class="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-5">
+            <a class="nav-logo d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" alt="MindfulPath Logo" style="width: 45px; height: 45px; border-radius: 50%;">
+                <span class="ms-2 fw-bold">MindfulPath</span>
+            </a>
+            <button class="mobile-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="nav-links d-flex flex-column flex-lg-row gap-2 gap-lg-4 mb-0">
+                    <li><a href="index.html" class="nav-link px-3 py-2 rounded-pill">Home</a></li>
+                    <li><a href="services.html" class="nav-link px-3 py-2 rounded-pill">Services</a></li>
+                    <li><a href="learn.html" class="nav-link px-3 py-2 rounded-pill">Learn</a></li>
+                    <li><a href="tools.html" class="nav-link px-3 py-2 rounded-pill">Tools</a></li>
+                    <li><a href="support.html" class="nav-link px-3 py-2 rounded-pill">Support</a></li>
+                    <li><a href="reviews.html" class="nav-link px-3 py-2 rounded-pill active">Reviews</a></li>
+                    <li><a href="#" class="btn btn-primary nav-cta" id="openMoodCheckin">Mood Check-in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Reviews & Testimonials</h1>
+        <p>See what our community says about MindfulPath</p>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-4">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-4">
+                    <h3 class="fw-bold mb-0" style="color: var(--soft-teal);">4.9</h3>
+                    <small class="text-white-50">Average Rating</small>
+                    <div class="mt-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F39C12"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F39C12"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F39C12"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F39C12"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F39C12"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h3 class="fw-bold mb-0" style="color: var(--soft-teal);">2,847</h3>
+                    <small class="text-white-50">Total Reviews</small>
+                </div>
+                <div class="col-4">
+                    <h3 class="fw-bold mb-0" style="color: var(--soft-teal);">96%</h3>
+                    <small class="text-white-50">Would Recommend</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Write Review Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card p-4 mb-5">
+                        <h3 class="mb-4">Share Your Experience</h3>
+                        <form id="reviewForm">
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Your Rating</label>
+                                <div class="star-rating" id="starRating">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </div>
+                                <small class="text-muted">Selected: <span id="ratingValue">0</span>/5 stars</small>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="reviewName" class="form-label">Your Name *</label>
+                                    <input type="text" class="form-control" id="reviewName" required placeholder="Sarah Johnson">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="reviewEmail" class="form-label">Email (not published) *</label>
+                                    <input type="email" class="form-control" id="reviewEmail" required placeholder="sarah@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label for="reviewTitle" class="form-label">Review Title *</label>
+                                    <input type="text" class="form-control" id="reviewTitle" required placeholder="Summary of your experience">
+                                </div>
+                                <div class="col-12">
+<label for="reviewText" class="form-label">Your Review *</label>
+                                    <textarea class="form-control" id="reviewText" rows="4" required placeholder="Tell us about your experience with MindfulPath..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                        Submit Review
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews List -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Real stories from the MindfulPath community</p>
+            </div>
+            <div id="reviewsContainer">
+                <!-- Default reviews -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="review-author-img">J</div>
+                            <div>
+                                <h5 class="mb-0">James Wilson</h5>
+                                <small class="text-muted">Verified User</small>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                    </div>
+                    <h4 class="review-title">Changed my life</h4>
+                    <p class="review-text">I've been using MindfulPath for 3 months now, and the difference is incredible. The breathing exercises helped me manage work stress better. I sleep better and feel more in control of my emotions. Highly recommend!</p>
+                    <div class="review-helpful">
+                        <small class="text-muted">42 people found this helpful</small>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="review-author-img">M</div>
+                            <div>
+                                <h5 class="mb-0">Maria Garcia</h5>
+                                <small class="text-muted">Verified User</small>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                    </div>
+                    <h4 class="review-title">Perfect for busy professionals</h4>
+                    <p class="review-text">As a working mother, I barely have time for myself. MindfulPath's 5-minute exercises fit perfectly into my routine. The self-care reminders are gentle but effective. Worth every penny!</p>
+                    <div class="review-helpful">
+                        <small class="text-muted">38 people found this helpful</small>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="review-author-img">R</div>
+                            <div>
+                                <h5 class="mb-0">Robert Chen</h5>
+                                <small class="text-muted">Verified User</small>
+                            </div>
+                        </div>
+                        <div class="star-rating">
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24" class="active"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                    </div>
+                    <h4 class="review-title">Good but could use more content</h4>
+                    <p class="review-text">Really enjoying the app overall. The mood tracking feature is fantastic. Only giving 4 stars because I'd love to see more guided meditation content. Keep up the great work!</p>
+                    <div class="review-helpful">
+                        <small class="text-muted">15 people found this helpful</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-gradient">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We'd love to hear from you.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-4">Send us a message</h4>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" required placeholder="Your name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" required placeholder="your@email.com">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Subject</label>
+                                <select class="form-select">
+                                    <option>General Inquiry</option>
+                                    <option>Partnership</option>
+                                    <option>Feedback</option>
+                                    <option>Support</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Message *</label>
+                                <textarea class="form-control" rows="4" required placeholder="Your message..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-4">Contact Information</h4>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon me-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Email</h6>
+                                <p class="mb-0 text-muted">hello@mindfulpath.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon me-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Office</h6>
+                                <p class="mb-0 text-muted">123 Wellness Street<br>London, UK EC1R 4TF</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon me-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">UK Phone</h6>
+                                <p class="mb-0 text-muted">+44 20 7946 0958</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary-green)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">WhatsApp</h6>
+                                <p class="mb-0 text-muted">+44 7911 123456</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Response Time</h6>
+                                <p class="mb-0 text-muted">We typically reply within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="nav-logo mb-3">
+                            <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="18" stroke="#4ECDC4" stroke-width="3"/><path d="M20 10C14 10 12 16 12 20C12 28 20 30 20 30C20 30 28 28 28 20C28 16 26 10 20 10Z" fill="#4ECDC4" opacity="0.5"/><circle cx="20" cy="18" r="5" fill="#4ECDC4"/></svg>
+                            <span class="ms-2 fw-bold text-white fs-4">MindfulPath</span>
+                        </div>
+                        <p>Supporting your mental wellbeing with simple tools, guidance, and daily habits.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="learn.html">Learn</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="learn.html">Mental Health 101</a></li>
+                        <li><a href="tools.html">Wellbeing Toolkit</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Crisis Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html" style="color: var(--soft-teal);">Need urgent help?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top">
+                <p class="mb-2 mb-md-0">&copy; 2026 MindfulPath. All rights reserved.</p>
+                <div>
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mood Modal & Cookie Consent -->
+    <div class="modal-overlay" id="moodModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeMoodModal">&times;</button>
+            <h3 class="text-center mb-2">Daily Mood Check-in</h3>
+            <p class="text-center text-muted mb-4">How are you feeling right now?</p>
+            <form id="moodForm">
+                <div class="mood-options">
+                    <button type="button" class="mood-btn" data-mood="great">&#128513;</button>
+                    <button type="button" class="mood-btn" data-mood="good">&#128522;</button>
+                    <button type="button" class="mood-btn" data-mood="okay">&#128528;</button>
+                    <button type="button" class="mood-btn" data-mood="low">&#128533;</button>
+                    <button type="button" class="mood-btn" data-mood="bad">&#128543;</button>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Save Check-in</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" style="display: none;">
+        <div class="cookie-consent-content">
+            <h4>Your Privacy Matters</h4>
+            <p>We use cookies to enhance your browsing experience. <a href="#" style="color: var(--soft-teal); text-decoration: underline;">Learn more</a></p>
+        </div>
+        <div class="cookie-consent-buttons">
+            <button id="declineCookies" class="cookie-btn cookie-btn-decline">Decline</button>
+            <button id="acceptCookies" class="cookie-btn cookie-btn-accept">Accept All</button>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var banner = document.getElementById('cookieConsent');
+        var consent = getCookie('cookiesAccepted');
+        if (!consent) {
+            banner.style.display = 'flex';
+        }
+        document.getElementById('acceptCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'true', 365);
+            banner.style.display = 'none';
+        };
+        document.getElementById('declineCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'false', 30);
+            banner.style.display = 'none';
+        };
+    })();
+    </script>
+    
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

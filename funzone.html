@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Zone - MindfulPath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/funzone.css">
+</head>
+<body>
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/logo.png" alt="MindfulPath Logo" style="width: 45px; height: 45px; border-radius: 50%;">
+            <span>MindfulPath</span>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="funzone.html" class="active">Fun Zone</a></li>
+            <li class="nav-dropdown">
+                <a href="reviews.html">Reviews</a>
+            </li>
+            <li><a href="#" class="nav-cta" id="openMoodCheckin">Mood Check-in</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header fun-header">
+        <div class="fun-header-bg"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Fun & Relax Zone</h1>
+                    <p>Discover joy, boost your mood, and unwind with interactive wellbeing activities.</p>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="img/therapy.jpg" alt="Relaxation Activities" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mood Picker Section -->
+    <section class="section" id="moodPicker">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Are You Feeling?</h2>
+                <p>Click your current mood and get a personalized tip!</p>
+            </div>
+            <div class="mood-picker-container">
+                <div class="mood-buttons">
+                    <button class="mood-btn-fun" data-mood="happy" onclick="selectMood('happy')">
+                        <span class="mood-emoji">🙂</span>
+                        <span class="mood-label">Happy</span>
+                    </button>
+                    <button class="mood-btn-fun" data-mood="sad" onclick="selectMood('sad')">
+                        <span class="mood-emoji">😢</span>
+                        <span class="mood-label">Sad</span>
+                    </button>
+                    <button class="mood-btn-fun" data-mood="stressed" onclick="selectMood('stressed')">
+                        <span class="mood-emoji">😟</span>
+                        <span class="mood-label">Stressed</span>
+                    </button>
+                    <button class="mood-btn-fun" data-mood="energetic" onclick="selectMood('energetic')">
+                        <span class="mood-emoji">⚡</span>
+                        <span class="mood-label">Energetic</span>
+                    </button>
+                    <button class="mood-btn-fun" data-mood="tired" onclick="selectMood('tired')">
+                        <span class="mood-emoji">😴</span>
+                        <span class="mood-label">Tired</span>
+                    </button>
+                    <button class="mood-btn-fun" data-mood="anxious" onclick="selectMood('anxious')">
+                        <span class="mood-emoji">😰</span>
+                        <span class="mood-label">Anxious</span>
+                    </button>
+                </div>
+                <div id="moodResult" class="mood-result" style="display: none;">
+                    <div class="mood-result-icon"></div>
+                    <h3 id="moodTitle"></h3>
+                    <p id="moodMessage"></p>
+                    <div class="mood-tip">
+                        <strong>💡 Your Tip:</strong>
+                        <p id="moodTip"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation Generator -->
+    <section class="section bg-gradient" id="motivationGenerator">
+        <div class="container">
+            <div class="motivation-container">
+                <div class="section-header">
+                    <h2>Need a Boost?</h2>
+                    <p>Click below for instant motivation and positivity!</p>
+                </div>
+                <div class="motivation-card">
+                    <div class="motivation-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+</svg>
+                    </div>
+                    <div id="motivationContent">
+                        <p id="motivationText" class="motivation-quote">"Your mental health is a priority. Your feelings are valid."</p>
+                        <small id="motivationAuthor" class="motivation-author">— MindfulPath</small>
+                    </div>
+                    <button class="btn btn-primary btn-lg" onclick="generateMotivation()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        Give me a boost!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellbeing Style Quiz -->
+    <section class="section" id="wellbeingQuiz">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's Your Wellbeing Style?</h2>
+                <p>Answer 4 quick questions to discover your unique approach to wellness!</p>
+            </div>
+            <div class="quiz-wrapper">
+                <div id="styleQuizIntro" class="style-quiz-card text-center">
+                    <div class="quiz-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Discover Your Style</h3>
+                    <p class="text-muted mb-4">This fun quiz will help you understand how you naturally approach wellbeing.</p>
+                    <button class="btn btn-primary btn-lg" onclick="startStyleQuiz()">Start Quiz</button>
+                </div>
+                
+                <div id="styleQuizQuestions" class="style-quiz-card" style="display: none;">
+                    <div class="quiz-progress">
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" id="quizStyleProgress" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <small class="text-muted">Question <span id="currentStyleQ">1</span> of 4</small>
+                    </div>
+                    <h3 id="styleQuestionText" class="mb-4"></h3>
+                    <div id="styleOptionsContainer" class="d-flex flex-column gap-3"></div>
+                    <button class="btn btn-primary mt-4" id="styleNextBtn" onclick="nextStyleQuestion()" disabled>Next</button>
+                </div>
+                
+                <div id="styleQuizResults" class="style-quiz-card text-center" style="display: none;">
+                    <div id="styleResultIcon" class="style-result-icon"></div>
+                    <h3 id="styleResultTitle"></h3>
+                    <p id="styleResultDesc" class="text-muted mb-4"></p>
+                    <div class="style-traits">
+                        <h5>Your Key Traits:</h5>
+                        <div id="styleTraitsList" class="traits-list"></div>
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-4">
+                        <button class="btn btn-outline-primary" onclick="retakeStyleQuiz()">Retake Quiz</button>
+                        <a href="services.html" class="btn btn-primary">Explore Your Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breathing Exercise Timer -->
+    <section class="section bg-light" id="breathingTimer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guided Breathing Timer</h2>
+                <p>Follow along with this simple exercise to calm your mind instantly.</p>
+            </div>
+            <div class="breathing-exercise-container">
+                <div class="breathing-circle-fun" id="breathingCircle">
+                    <div class="breathing-inner">
+                        <span id="breathingText">Click Start</span>
+                    </div>
+                </div>
+                <div class="breathing-info">
+                    <p id="breathingInstruction">A simple 4-4-4 breathing pattern to help you relax</p>
+                    <div class="breathing-stats">
+                        <div class="stat">
+                            <span id="cycleCount">0</span>
+                            <small>Cycles</small>
+                        </div>
+                        <div class="stat">
+                            <span id="timeElapsed">0:00</span>
+                            <small>Time</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="breathing-controls">
+                    <button class="btn btn-primary btn-lg" id="breathingStartBtn" onclick="startBreathing()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        Start Exercise
+                    </button>
+                    <button class="btn btn-outline-secondary" id="breathingStopBtn" onclick="stopBreathing()" style="display: none;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                            <rect x="6" y="4" width="4" height="16"/>
+                            <rect x="14" y="4" width="4" height="16"/>
+                        </svg>
+                        Stop
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colour Mood Selector -->
+    <section class="section" id="colourMood">
+        <div class="container">
+            <div class="section-header">
+                <h2>Colour Mood Selector</h2>
+                <p>Click a colour to discover how it affects your mood and emotions.</p>
+            </div>
+            <div class="colour-selector">
+                <button class="colour-btn" style="background: #3498db;" data-colour="blue" onclick="selectColour('blue')" title="Calm Blue">
+                    <span>Blue</span>
+                </button>
+                <button class="colour-btn" style="background: #2ecc71;" data-colour="green" onclick="selectColour('green')" title="Relaxed Green">
+                    <span>Green</span>
+                </button>
+                <button class="colour-btn" style="background: #f1c40f;" data-colour="yellow" onclick="selectColour('yellow')" title="Happy Yellow">
+                    <span>Yellow</span>
+                </button>
+                <button class="colour-btn" style="background: #e74c3c;" data-colour="red" onclick="selectColour('red')" title="Energetic Red">
+                    <span>Red</span>
+                </button>
+                <button class="colour-btn" style="background: #9b59b6;" data-colour="purple" onclick="selectColour('purple')" title="Creative Purple">
+                    <span>Purple</span>
+                </button>
+                <button class="colour-btn" style="background: #ff9ff3;" data-colour="pink" onclick="selectColour('pink')" title="Loving Pink">
+                    <span>Pink</span>
+                </button>
+                <button class="colour-btn" style="background: #34495e;" data-colour="grey" onclick="selectColour('grey')" title="Neutral Grey">
+                    <span>Grey</span>
+                </button>
+            </div>
+            <div id="colourResult" class="colour-result" style="display: none;">
+                <div id="colourPreview" class="colour-preview"></div>
+                <div class="colour-info">
+                    <h3 id="colourTitle"></h3>
+                    <p id="colourEffect"></p>
+                    <div class="colour-tips">
+                        <h5>How to use this colour:</h5>
+                        <ul id="colourTipsList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Challenge -->
+    <section class="section bg-gradient" id="dailyChallenge">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daily Wellness Challenge</h2>
+                <p>Complete this small task today for a healthier mind and body!</p>
+            </div>
+            <div class="challenge-card">
+                <div class="challenge-badge">Today's Challenge</div>
+                <div class="challenge-icon" id="challengeIcon">💧</div>
+                <div class="challenge-content">
+                    <h3 id="challengeTitle">Drink a Glass of Water</h3>
+                    <p id="challengeDesc">Staying hydrated boosts your energy and helps maintain mental clarity. Aim for 8 glasses a day!</p>
+                </div>
+                <div class="challenge-progress">
+                    <div class="streak-info">
+                        <span id="streakCount">0</span>
+                        <small>Day Streak</small>
+                    </div>
+                    <button class="btn btn-success btn-lg" id="challengeBtn" onclick="completeChallenge()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        I did it!
+                    </button>
+                </div>
+                <button class="btn btn-link" onclick="skipChallenge()">Skip Challenge</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Wellness Fun Facts</h2>
+                <p>Did you know? Learn something new about mental health!</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="fun-fact-card">
+                        <div class="fun-fact-icon">🧠</div>
+                        <h4>Your Brain is Amazing</h4>
+                        <p>Your brain produces enough electricity to power a small light bulb when you're thinking!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fun-fact-card">
+                        <div class="fun-fact-icon">😴</div>
+                        <h4>Sleep Heals</h4>
+                        <p>During sleep, your brain processes emotions and consolidates memories. Aim for 7-9 hours!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fun-fact-card">
+                        <div class="fun-fact-icon">🎵</div>
+                        <h4>Music Magic</h4>
+                        <p>Listening to music can lower cortisol levels and reduce anxiety by up to 25%!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Enjoying the Fun Zone?</h2>
+        <p>Explore more tools and resources to support your mental wellbeing journey.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="tools.html" class="btn btn-secondary">Wellbeing Toolkit</a>
+            <a href="services.html" class="btn btn-primary">View Plans</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="#4ECDC4" stroke-width="3"/>
+                        <path d="M20 10C14 10 12 16 12 20C12 28 20 30 20 30C20 30 28 28 28 20C28 16 26 10 20 10Z" fill="#4ECDC4" opacity="0.5"/>
+                        <circle cx="20" cy="18" r="5" fill="#4ECDC4"/>
+                    </svg>
+                    <span style="color: white;">MindfulPath</span>
+                </div>
+                <p>Supporting your mental wellbeing with simple tools, guidance, and daily habits that make a difference.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="funzone.html">Fun Zone</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="learn.html">Mental Health 101</a></li>
+                    <li><a href="tools.html">Wellbeing Toolkit</a></li>
+                    <li><a href="services.html">Self-Care Plans</a></li>
+                    <li><a href="funzone.html">Activities</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li>support@mindfulpath.com</li>
+                    <li>1-800-MINDHELP</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MindfulPath. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mood Modal & Cookie Consent -->
+    <div class="modal-overlay" id="moodModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeMoodModal">&times;</button>
+            <h3 style="color: var(--navy-blue); margin-bottom: 0.5rem;">Daily Mood Check-in</h3>
+            <p style="color: var(--text-light);">How are you feeling right now?</p>
+            <form id="moodForm">
+                <div class="mood-options">
+                    <button type="button" class="mood-btn" data-mood="great">&#128513;</button>
+                    <button type="button" class="mood-btn" data-mood="good">&#128522;</button>
+                    <button type="button" class="mood-btn" data-mood="okay">&#128528;</button>
+                    <button type="button" class="mood-btn" data-mood="low">&#128533;</button>
+                    <button type="button" class="mood-btn" data-mood="bad">&#128543;</button>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Check-in</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" style="display: none;">
+        <div class="cookie-consent-content">
+            <h4>Your Privacy Matters</h4>
+            <p>We use cookies to enhance your browsing experience. <a href="#" style="color: var(--soft-teal); text-decoration: underline;">Learn more</a></p>
+        </div>
+        <div class="cookie-consent-buttons">
+            <button id="declineCookies" class="cookie-btn cookie-btn-decline">Decline</button>
+            <button id="acceptCookies" class="cookie-btn cookie-btn-accept">Accept All</button>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var banner = document.getElementById('cookieConsent');
+        var consent = getCookie('cookiesAccepted');
+        if (!consent) {
+            banner.style.display = 'flex';
+        }
+        document.getElementById('acceptCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'true', 365);
+            banner.style.display = 'none';
+        };
+        document.getElementById('declineCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'false', 30);
+            banner.style.display = 'none';
+        };
+    })();
+    </script>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/funzone.js"></script>
+</body>
+</html>
