@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - MindfulPath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/learn.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/logo.png" alt="MindfulPath Logo" style="width: 45px; height: 45px; border-radius: 50%;">
+            <span>MindfulPath</span>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="learn.html" class="active">Learn</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="funzone.html">Fun Zone</a></li>
+            <li class="nav-dropdown">
+                <a href="reviews.html">Reviews</a>
+            </li>
+            <li><a href="#" class="nav-cta" id="openMoodCheckin">Mood Check-in</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Learn About Mental Health</h1>
+                    <p>Understanding mental health is the first step toward taking care of yourself and others.</p>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="img/nature.jpg" alt="Nature Meditation" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Mental Health -->
+    <section class="section bg-light">
+        <div class="section-header">
+            <h2>What is Mental Health?</h2>
+            <p>Mental health encompasses our emotional, psychological, and social well-being. It affects how we think, feel, and act.</p>
+        </div>
+        <div class="education-grid">
+            <div class="education-block">
+                <h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Understanding Mental Health
+                </h3>
+                <p>Mental health is not simply the absence of mental illness. It's a state of well-being where an individual realizes their own abilities, can cope with normal stresses of life, works productively, and contributes to their community.</p>
+                <p>Just like physical health, mental health requires attention and care. It exists on a spectrum and can change over time based on life circumstances.</p>
+            </div>
+            <div class="education-block">
+                <h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    Why Mental Health Matters
+                </h3>
+                <ul>
+                    <li><strong>Quality of Life:</strong> Good mental health enhances your ability to enjoy life and handle challenges.</li>
+                    <li><strong>Physical Health:</strong> Mental and physical health are closely connected. Poor mental health can affect physical health.</li>
+                    <li><strong>Relationships:</strong> Mental well-being helps build and maintain healthy relationships.</li>
+                    <li><strong>Productivity:</strong> Good mental health improves focus, creativity, and work performance.</li>
+                    <li><strong>Longevity:</strong> People with good mental health often live longer, healthier lives.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stress vs Anxiety -->
+    <section class="section bg-light">
+        <div class="section-header">
+            <h2>Stress vs. Anxiety: Knowing the Difference</h2>
+            <p>Understanding whether you're experiencing stress or anxiety can help you choose the right coping strategies.</p>
+        </div>
+        <div class="compare-cards">
+            <div class="compare-card">
+                <h4 style="color: var(--primary-green);">Stress</h4>
+                <p><strong>Duration:</strong> Usually short-term, tied to specific situations or events</p>
+                <p><strong>Cause:</strong> External pressures like work deadlines, financial problems, or life changes</p>
+                <p><strong>Symptoms:</strong> Headaches, muscle tension, irritability, difficulty sleeping</p>
+                <p><strong>Response:</strong> Often manageable once the stressor is removed</p>
+                <p><strong>Feeling:</strong> "I'm overwhelmed by this situation"</p>
+            </div>
+            <div class="compare-card anxiety">
+                <h4 style="color: var(--soft-teal);">Anxiety</h4>
+                <p><strong>Duration:</strong> Can be persistent and long-lasting, even without clear triggers</p>
+                <p><strong>Cause:</strong> Can be internal, often persisting even when external pressures are low</p>
+                <p><strong>Symptoms:</strong> Excessive worry, restlessness, rapid breathing, racing thoughts</p>
+                <p><strong>Response:</strong> May require professional support and specific techniques</p>
+                <p><strong>Feeling:</strong> "I can't stop worrying about everything"</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="max-width: 700px; margin: 0 auto; color: var(--text-light);"><strong>When to Seek Help:</strong> If stress or anxiety significantly impacts your daily life, relationships, or work for more than two weeks, consider reaching out to a mental health professional.</p>
+        </div>
+    </section>
+
+    <!-- Common Triggers -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Common Triggers in Modern Life</h2>
+            <p>Understanding common stressors can help you recognize and address them proactively.</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <h3>Work & Career</h3>
+                <p>Tight deadlines, job insecurity, long hours, and workplace conflicts can create significant stress. The pressure to perform and advance adds to mental burden.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3>Financial Pressures</h3>
+                <p>Money concerns affect millions of people. Debt, bills, job loss, and the cost of living create ongoing anxiety that can feel overwhelming.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/><line x1="17" y1="15" x2="23" y2="15"/></svg>
+                </div>
+                <h3>Relationships</h3>
+                <p>Family dynamics, friendships, and romantic relationships all require energy and emotional investment. Conflicts and communication issues can trigger stress.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                </div>
+                <h3>Social Media & Technology</h3>
+                <p>Constant connectivity, comparison culture, and information overload from digital devices contribute to anxiety and reduced wellbeing.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Time Pressure</h3>
+                <p>Never having enough time creates chronic stress. The constant rush, lack of work-life balance, and feeling behind on responsibilities affects mental health.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                </div>
+                <h3>Health Concerns</h3>
+                <p>Worrying about personal health, caring for sick family members, or global health crises can trigger significant anxiety and stress responses.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>1 in 4</h3>
+                <p>People experience mental health issues each year</p>
+            </div>
+            <div class="stat-item">
+                <h3>75%</h3>
+                <p>Of mental health issues develop before age 25</p>
+            </div>
+            <div class="stat-item">
+                <h3>60%</h3>
+                <p>Don't seek help due to stigma</p>
+            </div>
+            <div class="stat-item">
+                <h3>90%</h3>
+                <p>Of mental health issues can be treated successfully</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signs You Might Need Support -->
+    <section class="section bg-gradient">
+        <div class="section-header">
+            <h2>Signs You Might Need Support</h2>
+            <p>It's okay to ask for help. Here are some signs that reaching out might benefit you.</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Persistent Feelings</h3>
+                <p>If you've felt sad, anxious, or empty for more than two weeks, it may be time to talk to someone.</p>
+            </div>
+            <div class="card">
+                <h3>Changes in Sleep or Appetite</h3>
+                <p>Significant changes in sleeping patterns or eating habits can indicate mental health concerns.</p>
+            </div>
+            <div class="card">
+                <h3>Withdrawal from Activities</h3>
+                <p>Losing interest in activities you once enjoyed, including hobbies and socializing, can be a warning sign.</p>
+            </div>
+            <div class="card">
+                <h3>Difficulty Functioning</h3>
+                <p>Struggling to meet work, school, or family responsibilities due to emotional difficulties warrants attention.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Take the Next Step?</h2>
+        <p>Knowledge is power. Combine what you've learned with our tools and support for better mental health.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="tools.html" class="btn btn-secondary">Explore Our Tools</a>
+            <a href="support.html" class="btn btn-primary" style="background: white; color: var(--primary-green);">Get Support</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <svg viewBox="0 040 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="#4ECDC4" stroke-width="3"/>
+                        <path d="M20 10C14 10 12 16 12 20C12 28 20 30 20 30C20 30 28 28 28 20C28 16 26 10 20 10Z" fill="#4ECDC4" opacity="0.5"/>
+                        <circle cx="20" cy="18" r="5" fill="#4ECDC4"/>
+                    </svg>
+                    <span style="color: white;">MindfulPath</span>
+                </div>
+                <p>Supporting your mental wellbeing with simple tools, guidance, and daily habits that make a difference.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="learn.html">Mental Health 101</a></li>
+                    <li><a href="tools.html">Wellbeing Toolkit</a></li>
+                    <li><a href="services.html">Self-Care Plans</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>support@mindfulpath.com</li>
+                    <li>1-800-MINDHELP</li>
+                    <li>Mon-Fri: 8am - 8pm EST</li>
+                </ul>
+                <h4 style="margin-top: 1.5rem;">Crisis Support</h4>
+                <ul class="footer-links">
+                    <li><a href="support.html" style="color: #4ECDC4;">Need urgent help?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MindfulPath. All rights reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mood Modal & Cookie Consent -->
+    <div class="modal-overlay" id="moodModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeMoodModal">&times;</button>
+            <h3 style="color: var(--navy-blue); margin-bottom: 0.5rem;">Daily Mood Check-in</h3>
+            <p style="color: var(--text-light);">How are you feeling right now?</p>
+            <form id="moodForm">
+                <div class="mood-options">
+                    <button type="button" class="mood-btn" data-mood="great">&#128513;</button>
+                    <button type="button" class="mood-btn" data-mood="good">&#128522;</button>
+                    <button type="button" class="mood-btn" data-mood="okay">&#128528;</button>
+                    <button type="button" class="mood-btn" data-mood="low">&#128533;</button>
+                    <button type="button" class="mood-btn" data-mood="bad">&#128543;</button>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Check-in</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" style="display: none;">
+        <div class="cookie-consent-content">
+            <h4>Your Privacy Matters</h4>
+            <p>We use cookies to enhance your browsing experience. <a href="#" style="color: var(--soft-teal); text-decoration: underline;">Learn more</a></p>
+        </div>
+        <div class="cookie-consent-buttons">
+            <button id="declineCookies" class="cookie-btn cookie-btn-decline">Decline</button>
+            <button id="acceptCookies" class="cookie-btn cookie-btn-accept">Accept All</button>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var banner = document.getElementById('cookieConsent');
+        var consent = getCookie('cookiesAccepted');
+        if (!consent) {
+            banner.style.display = 'flex';
+        }
+        document.getElementById('acceptCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'true', 365);
+            banner.style.display = 'none';
+        };
+        document.getElementById('declineCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'false', 30);
+            banner.style.display = 'none';
+        };
+    })();
+    </script>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
