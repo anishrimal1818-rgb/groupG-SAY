@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellbeing Toolkit - MindfulPath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/tools.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/logo.png" alt="MindfulPath Logo" style="width: 45px; height: 45px; border-radius: 50%;">
+            <span>MindfulPath</span>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="tools.html" class="active">Tools</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="funzone.html">Fun Zone</a></li>
+            <li class="nav-dropdown">
+                <a href="reviews.html">Reviews</a>
+            </li>
+            <li><a href="#" class="nav-cta" id="openMoodCheckin">Mood Check-in</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Wellbeing Toolkit</h1>
+                    <p>Practical techniques and exercises you can use daily to improve your mental health.</p>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="img/journal.jpg" alt="Journaling" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breathing Exercises -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Breathing Exercises</h2>
+            <p>Simple yet powerful techniques to calm your mind and body in minutes.</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <div class="breathing-circle">
+                    <span class="breathing-text">Breathe In...</span>
+                </div>
+                <h3 style="text-align: center;">4-7-8 Breathing Technique</h3>
+                <div class="tool-steps">
+                    <h4>How to Practice:</h4>
+                    <ol>
+                        <li>Find a comfortable seated position</li>
+                        <li>Exhale completely through your mouth</li>
+                        <li>Inhale quietly through your nose for 4 seconds</li>
+                        <li>Hold your breath for 7 seconds</li>
+                        <li>Exhale completely through your mouth for 8 seconds</li>
+                        <li>Repeat for 4 cycles</li>
+                    </ol>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-light);"><strong>Benefits:</strong> Reduces anxiety, helps with sleep, calms the nervous system.</p>
+            </div>
+            <div class="card">
+                <h3>Box Breathing (4-4-4-4)</h3>
+                <p>This technique is used by Navy SEALs to stay calm under pressure.</p>
+                <div class="tool-steps">
+                    <h4>How to Practice:</h4>
+                    <ol>
+                        <li>Exhale to a count of 4</li>
+                        <li>Inhale to a count of 4</li>
+                        <li>Hold your breath for 4 seconds</li>
+                        <li>Exhale to a count of 4</li>
+                        <li>Repeat for 5-10 cycles</li>
+                    </ol>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-light);"><strong>Tip:</strong> Visualize tracing a box as you breathe for better focus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-Minute Mindfulness -->
+    <section class="section bg-light">
+        <div class="section-header">
+            <h2>5-Minute Mindfulness</h2>
+            <p>Quick mindfulness exercises that fit into even the busiest day.</p>
+        </div>
+        <div class="card-grid">
+            <div class="tool-card">
+                <div class="tool-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div class="tool-content">
+                    <h3>Body Scan Meditation</h3>
+                    <p>Release tension from head to toe with this guided body awareness practice.</p>
+                    <div class="tool-steps">
+                        <ol>
+                            <li>Close your eyes and take 3 deep breaths</li>
+                            <li>Focus attention on your feet - notice sensations</li>
+                            <li>Slowly move attention up through legs, torso, arms</li>
+                            <li>End by relaxing your face and jaw</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="tool-content">
+                    <h3>Grounding Exercise (5-4-3-2-1)</h3>
+                    <p>When anxiety strikes, reconnect with the present using your senses.</p>
+                    <div class="tool-steps">
+                        <ol>
+                            <li>Name 5 things you can see</li>
+                            <li>Name 4 things you can touch</li>
+                            <li>Name 3 things you can hear</li>
+                            <li>Name 2 things you can smell</li>
+                            <li>Name 1 thing you can taste</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-image">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div class="tool-content">
+                    <h3>Loving-Kindness Meditation</h3>
+                    <p>Cultivate compassion for yourself and others through this gentle practice.</p>
+                    <div class="tool-steps">
+                        <ol>
+                            <li>Visualize someone you love</li>
+                            <li>Repeat: "May you be happy, may you be healthy"</li>
+                            <li>Include yourself: "May I be happy, may I be healthy"</li>
+                            <li>Extend to neutral people, then difficult relationships</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journaling Prompts -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Journaling Prompts</h2>
+            <p>Use these questions to explore your thoughts and feelings through writing.</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Morning Reflections</h3>
+                <ul class="journal-list">
+                    <li>What am I grateful for today?</li>
+                    <li>What is one thing I want to accomplish?</li>
+                    <li>How do I want to feel by the end of the day?</li>
+                    <li>What is worrying me right now?</li>
+                    <li>What would make today meaningful?</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Evening Reflections</h3>
+                <ul class="journal-list">
+                    <li>What made me smile today?</li>
+                    <li>What challenged me and how did I handle it?</li>
+                    <li>What did I learn about myself?</li>
+                    <li>Who did I connect with and how?</li>
+                    <li>What would I do differently tomorrow?</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Self-Discovery</h3>
+                <ul class="journal-list">
+                    <li>What are my core values?</li>
+                    <li>When do I feel most alive?</li>
+                    <li>What am I afraid to admit to myself?</li>
+                    <li>What would I tell my younger self?</li>
+                    <li>What does my ideal life look like?</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sleep Improvement -->
+    <section class="section bg-gradient">
+        <div class="section-header">
+            <h2>Sleep Improvement Tips</h2>
+            <p>Better sleep leads to better mental health. Try these evidence-based strategies.</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </div>
+                <h3>Create a Sleep Sanctuary</h3>
+                <p>Your bedroom should be a haven for rest. Keep it cool (65-68°F), dark, and quiet. Remove work materials and screens from the space.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h3>Consistent Schedule</h3>
+                <p>Go to bed and wake up at the same time every day, even weekends. This helps regulate your body's internal clock for better sleep quality.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+                </div>
+                <h3>Limit Screen Time</h3>
+                <p>Avoid screens 1-2 hours before bed. The blue light disrupts melatonin production. Try reading, stretching, or gentle music instead.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Reset Routine -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Daily Reset Routine</h2>
+            <p>A 5-minute routine to transition between tasks and reset your focus.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="card" style="text-align: center;">
+                <h3>The Reset Protocol</h3>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem;">Press pause, breathe, and refocus with this simple sequence.</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: var(--light-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; font-size: 2rem;">1</div>
+                        <p><strong>Stop</strong><br/>Pause what you're doing</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: var(--light-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; font-size: 2rem;">2</div>
+                        <p><strong>Breathe</strong><br/>3 deep breaths</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: var(--light-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; font-size: 2rem;">3</div>
+                        <p><strong>Reset</strong><br/>Set your intention</p>
+                    </div>
+                </div>
+                <p style="color: var(--text-light);"><strong>Timer:</strong> <span id="resetTimer" style="color: var(--primary-green); font-size: 1.5rem;">5:00</span> minutes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gender-Specific Wellbeing Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Personalized Wellbeing</h2>
+                <p>Content tailored to your unique needs and experiences.</p>
+            </div>
+            
+            <!-- Gender Selector -->
+            <div class="gender-selector text-center mb-5">
+                <div class="btn-group" role="group" aria-label="Gender selection">
+                    <button type="button" class="btn btn-outline-primary gender-btn active" data-gender="men" onclick="switchGender('men')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                        For Men
+                    </button>
+                    <button type="button" class="btn btn-outline-primary gender-btn" data-gender="women" onclick="switchGender('women')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/><path d="M12 11v10"/></svg>
+                        For Women
+                    </button>
+                </div>
+                <p class="mt-3 text-muted small">Select your preference to see personalized content</p>
+            </div>
+
+            <!-- Men's Content -->
+            <div id="menContent" class="gender-content">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-4">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            </div>
+                            <h3>Stress Management Tips</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Practice the "grounding technique" when feeling overwhelmed</li>
+                                <li class="mb-2">Schedule regular "decompression time" after work</li>
+                                <li class="mb-2">Try progressive muscle relaxation before bed</li>
+                                <li class="mb-2">Set boundaries between work and personal life</li>
+                                <li class="mb-2">Talk to a trusted friend or therapist</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="showTip('stress-man')">Get Quick Tips</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-4">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                            </div>
+                            <h3>Fitness Routines</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">30-minute morning cardio to boost mood</li>
+                                <li class="mb-2">High-intensity interval training for stress relief</li>
+                                <li class="mb-2">Resistance training for confidence and strength</li>
+                                <li class="mb-2">Outdoor walks to reduce cortisol levels</li>
+                                <li class="mb-2">Yoga or stretching for muscle tension</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="showTip('fitness-man')">Start Routine</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-4">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            </div>
+                            <h3>Sleep Tips</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Maintain consistent sleep schedule (7-9 hours)</li>
+                                <li class="mb-2">Avoid screens 1 hour before bedtime</li>
+                                <li class="mb-2">Keep bedroom cool (65-68°F)</li>
+                                <li class="mb-2">Practice "power down" routine before bed</li>
+                                <li class="mb-2">Limit caffeine after 2pm</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="showTip('sleep-man')">Sleep Better Tonight</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Women's Content -->
+            <div id="womenContent" class="gender-content" style="display: none;">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-4">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                            <h3>Self-Care Routines</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Morning skincare ritual for mental clarity</li>
+                                <li class="mb-2">Digital detox for 30 minutes daily</li>
+                                <li class="mb-2">Candlelit baths with aromatherapy</li>
+                                <li class="mb-2">Nourishing meals as self-care practice</li>
+                                <li class="mb-2">Saying "no" without guilt</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="showTip('selfcare-women')">Build Your Routine</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-4">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <h3>Stress Relief Techniques</h3>
+<ul class="list-unstyled">
+                                <li class="mb-2">4-7-8 breathing for instant calm</li>
+                                <li class="mb-2">Body scan meditation for tension release</li>
+                                <li class="mb-2">Journaling to process emotions</li>
+                                <li class="mb-2">Nature walks for mental reset</li>
+                                <li class="mb-2">Creative expression through art or music</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="showTip('stress-women')">Find Your Calm</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 p-4">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </div>
+                            <h3>Journaling Prompts</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">What emotions am I avoiding today?</li>
+                                <li class="mb-2">What would my future self tell me?</li>
+                                <li class="mb-2">List 5 things I'm grateful for</li>
+                                <li class="mb-2">What boundary do I need to set?</li>
+                                <li class="mb-2">How did I show myself compassion?</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="showTip('journal-women')">Start Journaling</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Tip Modal -->
+            <div class="modal fade" id="tipModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="tipModalTitle">Quick Tip</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body" id="tipModalBody">
+                            <!-- Dynamic content -->
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stress Quiz Section -->
+    <section class="section" id="stressQuiz">
+        <div class="container">
+            <div class="section-header">
+                <h2>Stress Level Assessment</h2>
+                <p>Take a quick quiz to understand your current stress levels and get personalized recommendations.</p>
+            </div>
+            
+            <div class="quiz-container" id="quizContainer">
+                <!-- Quiz Intro -->
+                <div id="quizIntro" class="text-center">
+                    <div class="mb-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="80" height="80" style="color: var(--primary-green);">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>How Stressed Are You?</h3>
+                    <p class="text-muted mb-4">Answer these 10 quick questions to discover your stress level and get tailored advice.</p>
+                    <p class="small text-muted mb-4"><em>Note: This is a self-assessment tool, not a medical diagnosis.</em></p>
+                    <button class="btn btn-primary btn-lg" onclick="startQuiz()">
+                        Start Quiz
+                    </button>
+                </div>
+                
+                <!-- Quiz Questions -->
+                <div id="quizQuestions" style="display: none;">
+                    <div class="quiz-progress mb-4">
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-success" id="quizProgress" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <small class="text-muted mt-2 d-block">Question <span id="currentQ">1</span> of <span id="totalQ">10</span></small>
+                    </div>
+                    
+                    <h4 id="questionText" class="mb-4"></h4>
+                    
+                    <div id="optionsContainer" class="d-flex flex-column gap-3">
+                        <!-- Options will be inserted here -->
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-4">
+                        <button class="btn btn-outline-secondary" id="prevBtn" onclick="prevQuestion()" style="display: none;">
+                            Previous
+                        </button>
+                        <button class="btn btn-primary ms-auto" id="nextBtn" onclick="nextQuestion()">
+                            Next
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Quiz Results -->
+                <div id="quizResults" style="display: none;">
+                    <div class="text-center mb-4">
+                        <div id="stressLevelIcon" style="font-size: 4rem; margin-bottom: 1rem;"></div>
+                        <h3 id="stressLevelTitle"></h3>
+                        <p id="stressLevelScore" class="text-muted"></p>
+                    </div>
+                    
+                    <div class="stress-meter mb-4">
+                        <div class="stress-meter-bar">
+                            <div class="stress-meter-fill" id="stressMeterFill"></div>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span>Low</span>
+                            <span>Moderate</span>
+                            <span>High</span>
+                        </div>
+                    </div>
+                    
+                    <div id="resultsContent" class="mb-4">
+                        <!-- Results content will be inserted here -->
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap justify-content-center">
+                        <button class="btn btn-outline-primary" onclick="retakeQuiz()">Retake Quiz</button>
+                        <a href="contact.html" class="btn btn-primary">Talk to Someone</a>
+                        <a href="support.html" class="btn btn-secondary">View Support Options</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Want More Personalized Support?</h2>
+        <p>Our premium plans include access to guided sessions, personalized routines, and expert guidance.</p>
+        <a href="support.html" class="btn btn-secondary">Explore Plans</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="#4ECDC4" stroke-width="3"/>
+                        <path d="M20 10C14 10 12 16 12 20C12 28 20 30 20 30C20 30 28 28 28 20C28 16 26 10 20 10Z" fill="#4ECDC4" opacity="0.5"/>
+                        <circle cx="20" cy="18" r="5" fill="#4ECDC4"/>
+                    </svg>
+                    <span style="color: white;">MindfulPath</span>
+                </div>
+                <p>Supporting your mental wellbeing with simple tools, guidance, and daily habits that make a difference.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="learn.html">Mental Health 101</a></li>
+                    <li><a href="tools.html">Wellbeing Toolkit</a></li>
+                    <li><a href="services.html">Self-Care Plans</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>support@mindfulpath.com</li>
+                    <li>1-800-MINDHELP</li>
+                    <li>Mon-Fri: 8am - 8pm EST</li>
+                </ul>
+                <h4 style="margin-top: 1.5rem;">Crisis Support</h4>
+                <ul class="footer-links">
+                    <li><a href="support.html" style="color: #4ECDC4;">Need urgent help?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MindfulPath. All rights reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mood Modal & Cookie Consent -->
+    <div class="modal-overlay" id="moodModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeMoodModal">&times;</button>
+            <h3 style="color: var(--navy-blue); margin-bottom: 0.5rem;">Daily Mood Check-in</h3>
+            <p style="color: var(--text-light);">How are you feeling right now?</p>
+            <form id="moodForm">
+                <div class="mood-options">
+                    <button type="button" class="mood-btn" data-mood="great">&#128513;</button>
+                    <button type="button" class="mood-btn" data-mood="good">&#128522;</button>
+                    <button type="button" class="mood-btn" data-mood="okay">&#128528;</button>
+                    <button type="button" class="mood-btn" data-mood="low">&#128533;</button>
+                    <button type="button" class="mood-btn" data-mood="bad">&#128543;</button>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Check-in</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" style="display: none;">
+        <div class="cookie-consent-content">
+            <h4>Your Privacy Matters</h4>
+            <p>We use cookies to enhance your browsing experience. <a href="#" style="color: var(--soft-teal); text-decoration: underline;">Learn more</a></p>
+        </div>
+        <div class="cookie-consent-buttons">
+            <button id="declineCookies" class="cookie-btn cookie-btn-decline">Decline</button>
+            <button id="acceptCookies" class="cookie-btn cookie-btn-accept">Accept All</button>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var banner = document.getElementById('cookieConsent');
+        var consent = getCookie('cookiesAccepted');
+        if (!consent) {
+            banner.style.display = 'flex';
+        }
+        document.getElementById('acceptCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'true', 365);
+            banner.style.display = 'none';
+        };
+        document.getElementById('declineCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'false', 30);
+            banner.style.display = 'none';
+        };
+    })();
+    </script>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
