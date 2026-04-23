@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MindfulPath</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/logo.png" alt="MindfulPath Logo" style="width: 45px; height: 45px; border-radius: 50%;">
+            <span>MindfulPath</span>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="funzone.html">Fun Zone</a></li>
+            <li class="nav-dropdown">
+                <a href="reviews.html">Reviews</a>
+            </li>
+            <li><a href="#" class="nav-cta" id="openMoodCheckin">Mood Check-in</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Our Services</h1>
+                    <p>Discover the tools and support designed to help you thrive mentally and emotionally.</p>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="img/wellness.jpg" alt="Wellness Services" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gender-Specific Personal Lessons Banner (shown when coming from home) -->
+    <div id="genderBanner" class="gender-banner" style="display: none;">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="gender-icon" id="bannerIcon"></div>
+                    <div>
+                        <h4 id="bannerTitle" class="mb-1"></h4>
+                        <p id="bannerSubtitle" class="mb-0"></p>
+                    </div>
+                </div>
+                <a href="#personalLessons" class="btn btn-light">View Personal Lessons</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gender-Specific Personal Lessons Section (FIRST when coming from gender selection) -->
+    <section class="section" id="personalLessons">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="lessonsTitle">Personalized Mental Health Lessons</h2>
+                <p id="lessonsSubtitle">Tailored guidance for your wellbeing journey</p>
+            </div>
+            
+            <!-- Gender Tabs -->
+            <div class="gender-selector text-center mb-5">
+                <div class="btn-group" role="group" aria-label="Gender selection">
+                    <button type="button" class="btn btn-outline-primary gender-btn active" data-gender="men" onclick="switchPlanGender('men')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                        Men's Lessons
+                    </button>
+                    <button type="button" class="btn btn-outline-primary gender-btn" data-gender="women" onclick="switchPlanGender('women')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><circle cx="12" cy="7" r="4"/><path d="M12 11v10"/></svg>
+                        Women's Lessons
+                    </button>
+                </div>
+            </div>
+
+            <!-- Men's Personal Lessons -->
+            <div id="menLessons" class="lessons-container">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Managing Work Stress</h3>
+                                <p>Learn how to handle workplace pressure, set boundaries, and maintain mental clarity in demanding careers.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 15 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Healthy Coping Mechanisms</h3>
+                                <p>Discover constructive ways to process emotions without relying on unhealthy habits or avoidance.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 20 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Building Male Relationships</h3>
+                                <p>Develop deeper connections and learn to express vulnerability while maintaining authentic masculinity.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 25 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Sleep & Recovery Optimization</h3>
+                                <p>Science-backed strategies for better sleep quality and mental recovery after intense physical activity.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 18 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Anxiety in Modern Men</h3>
+                                <p>Understanding and overcoming the unique stressors men face in today's society.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 22 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Expressive Journaling</h3>
+                                <p>Use writing as a tool to process thoughts, set goals, and track mental health progress.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 12 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Women's Personal Lessons -->
+            <div id="womenLessons" class="lessons-container" style="display: none;">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Self-Compassion Practices</h3>
+                                <p>Learn to treat yourself with kindness and understand the power of self-nurturing habits.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 18 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Hormonal Wellness Balance</h3>
+                                <p>Navigate mood changes, stress, and emotional wellbeing through your monthly cycle.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 20 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Setting Healthy Boundaries</h3>
+                                <p>Learn to say no, protect your energy, and maintain relationships without losing yourself.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 22 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Emotion Processing Journal</h3>
+                                <p>Guided journaling techniques to understand and honor your emotional experiences.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 15 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Anxiety & Overthinking</h3>
+                                <p>Practical tools to calm racing thoughts and find peace in moments of anxiety.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 20 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                            </div>
+                            <div class="lesson-content">
+                                <h3>Daily Self-Care Rituals</h3>
+                                <p>Build sustainable self-care routines that fit your busy life and nurture your wellbeing.</p>
+                                <span class="lesson-duration"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 16 min lesson</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#servicePlans" class="btn btn-primary btn-lg">
+                    View All Plans
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section">
+        <div class="section-header">
+            <h2>What We Offer</h2>
+            <p>Comprehensive mental health support tailored to your unique journey.</p>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <h3>Stress Support Guides</h3>
+                <p>Our comprehensive stress management guides help you identify triggers and develop coping strategies that work for your lifestyle. Includes video tutorials and printable exercises.</p>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Identify your stress triggers</li>
+                    <li>Build resilience techniques</li>
+                    <li>Daily relaxation practices</li>
+                    <li>Work-life balance strategies</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                </div>
+                <h3>Anxiety Management Tools</h3>
+                <p>Evidence-based techniques to help you manage anxiety effectively. From breathing exercises to cognitive reframing, we provide practical tools for everyday use.</p>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Guided breathing exercises</li>
+                    <li>Cognitive behavioral techniques</li>
+                    <li>Grounding methods</li>
+                    <li>Progressive muscle relaxation</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <h3>Self-Care Plans</h3>
+                <p>Personalized daily routines designed to prioritize your mental and emotional wellbeing. Our self-care plans are flexible and adaptable to your schedule.</p>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Customized daily schedules</li>
+                    <li>Mindfulness reminders</li>
+                    <li>Activity suggestions</li>
+                    <li>Progress tracking</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <h3>Daily Wellbeing Tips</h3>
+                <p>Expert-curated daily tips delivered to help you maintain good mental health. Each day brings new insights, exercises, and inspiration.</p>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Daily mental health tips</li>
+                    <li>Motivational quotes</li>
+                    <li>Healthy habit suggestions</li>
+                    <li>Weekly challenges</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3>Mood Tracking</h3>
+                <p>Monitor your emotional wellbeing over time with our intuitive mood tracking system. Identify patterns and understand what affects your mental state.</p>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Quick daily check-ins</li>
+                    <li>Pattern recognition</li>
+                    <li>Trend visualization</li>
+                    <li>Trigger identification</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>Community Support</h3>
+                <p>Connect with others who understand your journey. Our community forums provide a safe space to share experiences and support each other.</p>
+                <ul style="color: var(--text-light); padding-left: 1.5rem;">
+                    <li>Peer support groups</li>
+                    <li>Expert Q&A sessions</li>
+                    <li>Success stories</li>
+                    <li>Resource sharing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+<section class="section bg-light">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Getting started with MindfulPath is simple and straightforward.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                </div>
+                <h4>1. Create Account</h4>
+                <p>Sign up in minutes and set up your profile</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                </div>
+                <h4>2. Set Goals</h4>
+                <p>Define what you want to achieve</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                </div>
+                <h4>3. Track Progress</h4>
+                <p>Monitor your improvement daily</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h4>4. See Results</h4>
+                <p>Enjoy improved wellbeing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gender-Specific Service Plans -->
+    <section class="section" id="servicePlans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Wellbeing Plan</h2>
+                <p>Select a personalized plan designed around your unique needs and experiences.</p>
+            </div>
+            
+            <!-- Gender Tabs -->
+            <div class="gender-selector text-center mb-5">
+                <div class="btn-group" role="group" aria-label="Gender selection">
+                    <button type="button" class="btn btn-outline-primary gender-btn active" data-gender="men" onclick="switchPlanGender('men')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                        Men's Wellness Plans
+                    </button>
+                    <button type="button" class="btn btn-outline-primary gender-btn" data-gender="women" onclick="switchPlanGender('women')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/><path d="M12 11v10"/></svg>
+                        Women's Wellness Plans
+                    </button>
+                </div>
+                <p class="mt-3 text-muted small">Plans tailored to address gender-specific mental health needs</p>
+            </div>
+
+            <!-- Men's Plans -->
+            <div id="menPlans" class="plans-container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <h3>Men's Basic</h3>
+                                <div class="plan-price"><span class="currency">$</span><span class="amount">9.99</span><span class="period">/month</span></div>
+                                <p class="plan-tagline">Perfect for getting started</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Stress management basics</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fitness-integrated wellness tips</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sleep improvement guide</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily mood check-in</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 5-min mindfulness exercises</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" onclick="selectPlan('men-basic')">Get Started</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="plan-card featured">
+                            <div class="plan-badge">Most Popular</div>
+                            <div class="plan-header">
+                                <h3>Men's Daily</h3>
+                                <div class="plan-price"><span class="currency">$</span><span class="amount">19.99</span><span class="period">/month</span></div>
+                                <p class="plan-tagline">Complete daily support</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Basic</strong></li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Stress resilience program</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom fitness routines</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sleep optimization plan</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Journaling for men</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Weekly group sessions</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" onclick="selectPlan('men-daily')">Get Started</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <h3>Men's Premium</h3>
+                                <div class="plan-price"><span class="currency">$</span><span class="amount">39.99</span><span class="period">/month</span></div>
+                                <p class="plan-tagline">Ultimate transformation</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Daily</strong></li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-on-1 personal coaching</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Advanced stress workshops</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Performance optimization</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Priority support 24/7</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Exclusive men's retreats</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" onclick="selectPlan('men-premium')">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Women's Plans -->
+            <div id="womenPlans" class="plans-container" style="display: none;">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <h3>Women's Basic</h3>
+                                <div class="plan-price"><span class="currency">$</span><span class="amount">9.99</span><span class="period">/month</span></div>
+                                <p class="plan-tagline">Perfect for getting started</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Self-care basics</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Stress relief techniques</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Journaling prompts</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily mood check-in</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 5-min mindfulness exercises</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" onclick="selectPlan('women-basic')">Get Started</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="plan-card featured">
+                            <div class="plan-badge">Most Popular</div>
+                            <div class="plan-header">
+                                <h3>Women's Daily</h3>
+                                <div class="plan-price"><span class="currency">$</span><span class="amount">19.99</span><span class="period">/month</span></div>
+                                <p class="plan-tagline">Complete daily support</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Basic</strong></li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Hormonal wellness support</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Self-care routines</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Anxiety management</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Deep journaling program</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Weekly group sessions</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" onclick="selectPlan('women-daily')">Get Started</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="plan-card">
+                            <div class="plan-header">
+                                <h3>Women's Premium</h3>
+                                <div class="plan-price"><span class="currency">$</span><span class="amount">39.99</span><span class="period">/month</span></div>
+                                <p class="plan-tagline">Ultimate transformation</p>
+                            </div>
+                            <ul class="plan-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Daily</strong></li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-on-1 personal coaching</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Advanced therapy workshops</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Life transitions support</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Priority support 24/7</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Exclusive women's retreats</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" onclick="selectPlan('women-premium')">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join thousands of others who have transformed their mental health with MindfulPath.</p>
+        <a href="#servicePlans" class="btn btn-secondary">Choose Your Plan</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="#4ECDC4" stroke-width="3"/>
+                        <path d="M20 10C14 10 12 16 12 20C12 28 20 30 20 30C20 30 28 28 28 20C28 16 26 10 20 10Z" fill="#4ECDC4" opacity="0.5"/>
+                        <circle cx="20" cy="18" r="5" fill="#4ECDC4"/>
+                    </svg>
+                    <span style="color: white;">MindfulPath</span>
+                </div>
+                <p>Supporting your mental wellbeing with simple tools, guidance, and daily habits that make a difference.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="learn.html">Mental Health 101</a></li>
+                    <li><a href="tools.html">Wellbeing Toolkit</a></li>
+                    <li><a href="services.html">Self-Care Plans</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li>support@mindfulpath.com</li>
+                    <li>1-800-MINDHELP</li>
+                    <li>Mon-Fri: 8am - 8pm EST</li>
+                </ul>
+                <h4 style="margin-top: 1.5rem;">Crisis Support</h4>
+                <ul class="footer-links">
+                    <li><a href="support.html" style="color: #4ECDC4;">Need urgent help?</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MindfulPath. All rights reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mood Modal & Cookie Consent -->
+    <div class="modal-overlay" id="moodModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeMoodModal">&times;</button>
+            <h3 style="color: var(--navy-blue); margin-bottom: 0.5rem;">Daily Mood Check-in</h3>
+            <p style="color: var(--text-light);">How are you feeling right now?</p>
+            <form id="moodForm">
+                <div class="mood-options">
+                    <button type="button" class="mood-btn" data-mood="great">&#128513;</button>
+                    <button type="button" class="mood-btn" data-mood="good">&#128522;</button>
+                    <button type="button" class="mood-btn" data-mood="okay">&#128528;</button>
+                    <button type="button" class="mood-btn" data-mood="low">&#128533;</button>
+                    <button type="button" class="mood-btn" data-mood="bad">&#128543;</button>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Check-in</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" style="display: none;">
+        <div class="cookie-consent-content">
+            <h4>Your Privacy Matters</h4>
+            <p>We use cookies to enhance your browsing experience. <a href="#" style="color: var(--soft-teal); text-decoration: underline;">Learn more</a></p>
+        </div>
+        <div class="cookie-consent-buttons">
+            <button id="declineCookies" class="cookie-btn cookie-btn-decline">Decline</button>
+            <button id="acceptCookies" class="cookie-btn cookie-btn-accept">Accept All</button>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var banner = document.getElementById('cookieConsent');
+        var consent = getCookie('cookiesAccepted');
+        if (!consent) {
+            banner.style.display = 'flex';
+        }
+        document.getElementById('acceptCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'true', 365);
+            banner.style.display = 'none';
+        };
+        document.getElementById('declineCookies').onclick = function() {
+            setCookie('cookiesAccepted', 'false', 30);
+            banner.style.display = 'none';
+        };
+    })();
+    </script>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

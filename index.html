@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindfulPath - Supporting Your Mental Wellbeing</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/index-style.css" />
+  </head>
+  <body>
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-5">
+        <a class="nav-logo d-flex align-items-center" href="index.html">
+          <img
+            src="img/logo.png"
+            alt="MindfulPath Logo"
+            style="width: 45px; height: 45px; border-radius: 50%"
+          />
+          <span class="ms-2 fw-bold">MindfulPath</span>
+        </a>
+        <button
+          class="mobile-toggle d-lg-none"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul
+            class="nav-links d-flex flex-column flex-lg-row gap-2 gap-lg-4 mb-0"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="nav-link px-3 py-2 rounded-pill active"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="services.html" class="nav-link px-3 py-2 rounded-pill"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="learn.html" class="nav-link px-3 py-2 rounded-pill"
+                >Learn</a
+              >
+            </li>
+            <li>
+              <a href="tools.html" class="nav-link px-3 py-2 rounded-pill"
+                >Tools</a
+              >
+            </li>
+            <li>
+              <a href="support.html" class="nav-link px-3 py-2 rounded-pill"
+                >Support</a
+              >
+            </li>
+            <li>
+              <a href="funzone.html" class="nav-link px-3 py-2 rounded-pill"
+                >Fun Zone</a
+              >
+            </li>
+            <li class="nav-dropdown">
+              <a href="reviews.html" class="nav-link px-3 py-2 rounded-pill"
+                >Reviews</a
+              >
+              <div class="nav-dropdown-menu">
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="btn btn-outline-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Floating Leaves Container -->
+      <div id="floatingLeaves" class="floating-leaves-container"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 hero-content">
+            <div class="hero-badge animate-slide">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                />
+              </svg>
+              Trusted by 50,000+ users
+            </div>
+
+            <!-- Fade-in Title Animation -->
+            <h1 class="fade-in-title">
+              Your Journey to <span>Mental Wellness</span> Starts Here
+            </h1>
+
+            <!-- Typing Effect Intro Text -->
+            <p class="lead fade-in-text" style="animation-delay: 0.5s">
+              <span id="typingText"></span><span class="typing-cursor">|</span>
+            </p>
+
+            <!-- Gender Selector -->
+            <div
+              class="gender-selector-home mt-4 fade-in-up"
+              style="animation-delay: 1.5s"
+            >
+              <p class="fw-bold mb-2">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="me-2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 16v-4M12 8h.01" /></svg
+                >Choose your experience:
+              </p>
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary gender-btn-home"
+                  data-gender="men"
+                  onclick="switchGenderHome('men', true)"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class="me-1"
+                  >
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+                  </svg>
+                  For Men
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary gender-btn-home"
+                  data-gender="women"
+                  onclick="switchGenderHome('women', true)"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class="me-1"
+                  >
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M12 11v10" />
+                  </svg>
+                  For Women
+                </button>
+              </div>
+              <div
+                id="genderWelcome"
+                class="mt-3 p-3 rounded-3 bg-white shadow-sm"
+                style="display: none"
+              ></div>
+            </div>
+
+            <!-- Hero Buttons -->
+            <div class="hero-buttons fade-in-up" style="animation-delay: 2s">
+              <a
+                href="services.html"
+                class="btn btn-primary btn-lg btn-animate"
+              >
+                Get Started
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="learn.html"
+                class="btn btn-outline-primary btn-lg btn-animate"
+                >Explore Resources</a
+              >
+            </div>
+            <div class="mt-4 fade-in-up" style="animation-delay: 2.3s">
+              <small class="text-muted">★★★★★ 4.9/5 from 2,000+ reviews</small>
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1 d-none d-lg-block">
+            <div class="hero-image-container">
+              <img
+                src="img/hero.jpg"
+                alt="Peaceful Nature - Mental Health"
+                class="img-fluid rounded-4 shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Random Wellbeing Quote -->
+    <section class="section bg-gradient py-4">
+      v
+      <div class="container">
+        <div class="text-center">
+          <div id="dailyQuote" class="p-4">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="var(--primary-green)"
+              opacity="0.3"
+              class="mb-3"
+            >
+              <path
+                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"
+              />
+              <path
+                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"
+              />
+            </svg>
+            <h4 id="quoteText" class="fst-italic mb-2">
+              "Your mental health is a priority. Your feelings are valid. Your
+              journey is unique."
+            </h4>
+            <small class="text-muted" id="quoteAuthor"
+              >— MindfulPath Daily Inspiration</small
+            >
+          </div>
+          <button
+            class="btn btn-sm btn-outline-primary mt-2"
+            onclick="showRandomQuote()"
+          >
+            New Quote
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose MindfulPath?</h2>
+          <p>
+            We combine science-backed techniques with compassionate support to
+            help you thrive.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+                  />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <h4>Personalized Plans</h4>
+              <p>Tailored to your unique needs and goals</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h4>Expert Guidance</h4>
+              <p>Created by mental health professionals</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h4>Track Progress</h4>
+              <p>Monitor your wellbeing over time</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h4>Safe & Secure</h4>
+              <p>Your data is protected and private</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>How We Can Help</h2>
+          <p>
+            Explore our range of services designed to support your mental health
+            journey.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 p-4">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  />
+                </svg>
+              </div>
+              <h3>Stress Support</h3>
+              <p>
+                Learn effective techniques to manage and reduce stress in your
+                daily life.
+              </p>
+              <a
+                href="services.html"
+                class="btn btn-outline-primary btn-sm mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 p-4">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4M12 16h.01" />
+                </svg>
+              </div>
+              <h3>Anxiety Management</h3>
+              <p>
+                Practical tools and exercises to help you cope with anxiety
+                effectively.
+              </p>
+              <a
+                href="services.html"
+                class="btn btn-outline-primary btn-sm mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 p-4">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+              </div>
+              <h3>Self-Care Plans</h3>
+              <p>
+                Customized daily routines to prioritize your mental and
+                emotional health.
+              </p>
+              <a
+                href="services.html"
+                class="btn btn-outline-primary btn-sm mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3">
+            <div class="stat-item">
+              <h3 class="display-4 fw-bold">50,000+</h3>
+              <p>Active Users</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-item">
+              <h3 class="display-4 fw-bold">95%</h3>
+              <p>Report Improvement</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-item">
+              <h3 class="display-4 fw-bold">24/7</h3>
+              <p>Support Available</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-item">
+              <h3 class="display-4 fw-bold">100+</h3>
+              <p>Wellbeing Resources</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-gradient">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Users Say</h2>
+          <p>
+            Real stories from people who've transformed their mental health with
+            MindfulPath.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="testimonial-card h-100">
+              <p class="testimonial-text">
+                "MindfulPath helped me understand my anxiety better. The
+                breathing exercises are incredible - I use them daily now."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AR</div>
+                <div class="author-info">
+                  <h5>Anish Rimal</h5>
+                  <span>Marketing Manager</span>
+                  <div class="mt-1">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-card h-100">
+              <p class="testimonial-text">
+                "The self-care plans are so practical. I finally have a routine
+                that works for my busy lifestyle. Highly recommended!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">YB</div>
+                <div class="author-info">
+                  <h5>Yogesh Bhatt</h5>
+                  <span>Software Engineer</span>
+                  <div class="mt-1">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-card h-100">
+              <p class="testimonial-text">
+                "I love the mood tracking feature. It's helped me identify
+                patterns I never noticed before. Game changer!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SH</div>
+                <div class="author-info">
+                  <h5>Sadia Hossian</h5>
+                  <span>Teacher</span>
+                  <div class="mt-1">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="#F39C12"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Mood CTA -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2 class="mb-3">How Are You Feeling Today?</h2>
+        <p class="mb-4">
+          Take a moment to check in with yourself. Understanding your emotions
+          is the first step to better mental health.
+        </p>
+        <button
+          class="btn btn-light btn-lg"
+          onclick="document.getElementById('moodModal').classList.add('active')"
+        >
+          Start Mood Check-in
+        </button>
+      </div>
+    </section>
+
+    <!-- Newsletter-->
+    <section class="newsletter-section">
+      <div class="container text-center">
+        <h3>Join Our Wellness Community</h3>
+        <p>
+          Get weekly tips, resources, and inspiration delivered to your inbox.
+        </p>
+        <form
+          class="newsletter-form row justify-content-center"
+          id="newsletterForm"
+        >
+          <div class="col-12 col-md-6">
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your email address"
+                required
+              />
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Find answers to common questions about our services and platform.
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item mb-3 border-0 shadow-sm rounded-3">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    Is MindfulPath free to use?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes! We offer a free tier with access to basic features. For
+                    advanced tools and personalized plans, we have premium
+                    options available.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3 border-0 shadow-sm rounded-3">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    Is my data kept private?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Absolutely. Your privacy is our priority. All your data is
+                    encrypted and we never share personal information with third
+                    parties.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3 border-0 shadow-sm rounded-3">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    Can I access resources on mobile?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes! Our platform is fully responsive and works seamlessly
+                    on desktop, tablet, and mobile devices.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3 border-0 shadow-sm rounded-3">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    How quickly will I see results?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Many users report feeling better within the first week.
+                    However, lasting change takes time and consistency. We
+                    recommend giving it at least 4 weeks.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4">
+            <div class="footer-brand">
+              <div class="nav-logo mb-3">
+                <svg viewBox="0 0 40 40" width="40" height="40">
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="18"
+                    stroke="#4ECDC4"
+                    stroke-width="3"
+                  />
+                  <path
+                    d="M20 10C14 10 12 16 12 20C12 28 20 30 20 30C20 30 28 28 28 20C28 16 26 10 20 10Z"
+                    fill="#4ECDC4"
+                    opacity="0.5"
+                  />
+                  <circle cx="20" cy="18" r="5" fill="#4ECDC4" />
+                </svg>
+                <span class="ms-2 fw-bold text-white fs-4">MindfulPath</span>
+              </div>
+              <p>
+                Supporting your mental wellbeing with simple tools, guidance,
+                and daily habits that make a difference.
+              </p>
+              <div class="footer-social">
+                <a href="#" class="social-link"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    /></svg
+                ></a>
+                <a href="#" class="social-link"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                    /></svg
+                ></a>
+                <a href="#" class="social-link"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="learn.html">Learn</a></li>
+              <li><a href="tools.html">Tools</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4>Resources</h4>
+            <ul class="footer-links">
+              <li><a href="learn.html">Mental Health 101</a></li>
+              <li><a href="tools.html">Wellbeing Toolkit</a></li>
+              <li><a href="services.html">Self-Care Plans</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li>support@mindfulpath.com</li>
+              <li>1-800-MINDHELP</li>
+              <li>Mon-Fri: 8am - 8pm EST</li>
+            </ul>
+            <h4 class="mt-4">Crisis Support</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="support.html" style="color: var(--soft-teal)"
+                  >Need urgent help?</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top"
+        >
+          <p class="mb-2 mb-md-0">
+            &copy; 2026 MindfulPath. All rights reserved.
+          </p>
+          <div>
+            <a href="#" class="me-3">Privacy Policy</a>
+            <a href="#" class="me-3">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mood Modal -->
+    <div class="modal-overlay" id="moodModal">
+      <div class="modal-content">
+        <button class="modal-close" id="closeMoodModal">&times;</button>
+        <h3 class="text-center mb-2">Daily Mood Check-in</h3>
+        <p class="text-center text-muted mb-4">
+          How are you feeling right now?
+        </p>
+        <form id="moodForm">
+          <div class="mood-options">
+            <button
+              type="button"
+              class="mood-btn"
+              data-mood="great"
+              title="Great"
+            >
+              &#128513;
+            </button>
+            <button
+              type="button"
+              class="mood-btn"
+              data-mood="good"
+              title="Good"
+            >
+              &#128522;
+            </button>
+            <button
+              type="button"
+              class="mood-btn"
+              data-mood="okay"
+              title="Okay"
+            >
+              &#128528;
+            </button>
+            <button type="button" class="mood-btn" data-mood="low" title="Low">
+              &#128533;
+            </button>
+            <button type="button" class="mood-btn" data-mood="bad" title="Bad">
+              &#128543;
+            </button>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">
+            Save Check-in
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h4 class="modal-title">Welcome Back</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="loginEmail"
+                  required
+                  placeholder="Enter your email"
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  required
+                  placeholder="Enter your password"
+                  minlength="6"
+                />
+                <div class="invalid-feedback">
+                  Password must be at least 6 characters
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary w-100 btn-animate">
+                Login
+              </button>
+              <p class="text-center mt-3 mb-0">
+                <a href="#" class="text-decoration-none">Forgot password?</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h4 class="modal-title">Create Your Account</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm">
+              <div class="mb-3">
+                <label for="regName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="regName"
+                  required
+                  placeholder="Enter your full name"
+                  minlength="2"
+                />
+                <div class="invalid-feedback">
+                  Name must be at least 2 characters
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="regEmail" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="regEmail"
+                  required
+                  placeholder="Enter your email"
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="regPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="regPassword"
+                  required
+                  placeholder="Create a password"
+                  minlength="8"
+                />
+                <div class="invalid-feedback">
+                  Password must be at least 8 characters
+                </div>
+                <small class="text-muted">At least 8 characters required</small>
+              </div>
+              <div class="mb-3">
+                <label for="regConfirm" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="regConfirm"
+                  required
+                  placeholder="Confirm your password"
+                />
+                <div class="invalid-feedback" id="passwordMatchError">
+                  Passwords do not match
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="agreeTerms"
+                  required
+                />
+                <label class="form-check-label" for="agreeTerms"
+                  >I agree to the <a href="#">Terms of Service</a> and
+                  <a href="#">Privacy Policy</a></label
+                >
+                <div class="invalid-feedback">You must agree to the terms</div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 btn-animate">
+                Create Account
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Consent Banner - ALWAYS VISIBLE -->
+    <div
+      id="cookieConsent"
+      class="cookie-consent"
+      style="display: flex !important"
+    >
+      <div class="cookie-consent-content">
+        <h4>🍪 Your Privacy Matters</h4>
+        <p>
+          We use cookies to enhance your browsing experience. By clicking
+          "Accept All", you consent to our use of cookies.
+        </p>
+      </div>
+      <div class="cookie-consent-buttons">
+        <button id="declineCookies" class="cookie-btn cookie-btn-decline">
+          Decline
+        </button>
+        <button id="acceptCookies" class="cookie-btn cookie-btn-accept">
+          Accept All
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // Cookie functions (standalone)
+        function mpSetCookie(name, value, days) {
+          var d = new Date();
+          d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+          document.cookie =
+            name +
+            "=" +
+            encodeURIComponent(value) +
+            ";expires=" +
+            d.toUTCString() +
+            ";path=/;SameSite=Lax";
+        }
+        function mpGetCookie(name) {
+          var n = name + "=";
+          var ca = document.cookie.split(";");
+          for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(n) === 0)
+              return decodeURIComponent(c.substring(n.length));
+          }
+          return null;
+        }
+
+        var banner = document.getElementById("cookieConsent");
+        var consent = mpGetCookie("cookiesAccepted");
+
+        // Hide banner if user already made choice
+        if (consent) {
+          banner.style.display = "none";
+        }
+
+        document.getElementById("acceptCookies").onclick = function () {
+          mpSetCookie("cookiesAccepted", "true", 365);
+          banner.style.display = "none";
+        };
+
+        document.getElementById("declineCookies").onclick = function () {
+          mpSetCookie("cookiesAccepted", "false", 30);
+          banner.style.display = "none";
+        };
+      })();
+    </script>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to top">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+  </body>
+</html>
