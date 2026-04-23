@@ -1,0 +1,139 @@
+/* Services Page Styles */
+
+/* Gender Banner */
+.gender-banner {
+    background: linear-gradient(135deg, var(--primary-green), var(--soft-teal));
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: 80px;
+}
+.gender-banner .gender-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gender-banner .gender-icon svg { color: white; }
+.gender-banner h4 { color: white; font-weight: 700; }
+.gender-banner p { color: rgba(255,255,255,0.9); }
+
+/* Lesson Cards */
+.lessons-container { margin-top: 2rem; }
+.lesson-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-green);
+    height: 100%;
+}
+.lesson-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.lesson-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--light-green);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.lesson-icon svg { width: 30px; height: 30px; color: var(--primary-green); }
+.lesson-content { flex: 1; }
+.lesson-content h3 { color: var(--navy-blue); margin-bottom: 0.5rem; font-size: 1.25rem; }
+.lesson-content p { color: var(--text-light); margin-bottom: 0.75rem; font-size: 0.95rem; }
+.lesson-duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* Plan Cards */
+.plans-container { margin-top: 2rem; }
+.plan-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+.plan-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.plan-card.featured {
+    border-color: var(--primary-green);
+    position: relative;
+    background: linear-gradient(to bottom, rgba(45, 139, 111, 0.05), var(--white));
+}
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-green);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.plan-header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-green);
+    margin-bottom: 1.5rem;
+}
+.plan-header h3 { color: var(--navy-blue); margin-bottom: 1rem; }
+.plan-price { margin-bottom: 0.5rem; }
+.plan-price .currency { font-size: 1.5rem; color: var(--primary-green); vertical-align: top; }
+.plan-price .amount { font-size: 3rem; font-weight: 700; color: var(--primary-green); }
+.plan-price .period { color: var(--text-light); font-size: 0.875rem; }
+.plan-tagline { color: var(--text-light); font-size: 0.875rem; margin: 0; }
+.plan-features { list-style: none; padding: 0; margin: 0 0 1.5rem 0; flex-grow: 1; }
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li svg { width: 20px; height: 20px; color: var(--primary-green); flex-shrink: 0; }
+.plan-features li.disabled { color: var(--text-light); opacity: 0.5; }
+.plan-features li.disabled svg { color: var(--danger); }
+
+/* Features Grid */
+.features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.feature-item { text-align: center; padding: 2rem; }
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-green), var(--soft-teal));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+.feature-icon svg { width: 40px; height: 40px; color: var(--white); }
+
+@media (max-width: 1024px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .features-grid { grid-template-columns: 1fr; }
+    .lesson-card { flex-direction: column; }
+    .lesson-icon { margin-bottom: 1rem; }
+}
